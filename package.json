@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
     "name": "newsapi",
     "version": "1.0.0",
     "main": "news.js",
@@ -18,7 +17,6 @@
         "express": "^4.21.1",
         "path": "^0.12.7"
     }
-=======
   "name": "newsapi",
   "version": "1.0.0",
   "main": "news.js",
@@ -35,5 +33,4 @@
     "ejs": "^3.1.10",
     "express": "^4.21.1"
   }
->>>>>>> origin/main
 }
