@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PersonalNews</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/news.css">
+</head>
+<body>
+    <nav class="nav-bar">
+        <h2 class="logo">
+            <a href="/category?category=everything">
+              <img src="Img/MyLogo.png" alt="KVS 360 Logo">
+            </a>
+        </h2>
+        <ul class="fav">
+            <li><a href="/category?category=India">India</a></li>
+            <li><a href="/category?category=Technology">Technology</a></li>
+            <li><a href="/category?category=International">International</a></li>
+        </ul>
+        <form action="/search" method="GET" class="search">
+            <input type="text" placeholder="e.g., movies" name="query" class="tt">
+            <button type="submit" class="butt">Search</button>
+        </form>        
+    </nav>
+    <main>
+        <% if(response && response.length>0){ %>
+            <% response.forEach(article => { %>
+            <% if (article.urlToImage && article.title && article.description) { %>
+            <a href="<%= article.url %>" target="_blank" class="news-link">
+            <div class="container">
+                <img src="<%= article.urlToImage %>" alt="news" class="image" name="image">
+                <h3><%= article.title %></h3>
+                <p><%= article.description %></p>
+            </div></a>
+            <% } %>
+            <% }); %>
+        <% }else{ %>
+            <p>No news available at the moment.</p>
+        <% } %>
+    </main>
+    <footer><h3>© <span id="year"></span></h3></footer>
+    <!-- Script to update the footer year -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const yearSpan = document.getElementById("year");
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+</body>
+</html>

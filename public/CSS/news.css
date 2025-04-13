@@ -1,0 +1,127 @@
+*{
+    font-family: Quicksand;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.nav-bar{
+    width: 100%;
+    height: 3.5rem;
+    background-color: cornflowerblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.5);
+    padding-left: 5%;
+    padding-right: 5%;
+    position: sticky;
+}
+.logo a{
+    text-decoration: none;
+    color: black;
+    display: flex; /* Ensures the image and text align well */
+    align-items: center; /* Centers the image and text vertically */
+}
+
+.logo img{
+    height: 2rem; /* Adjust the size of the logo image */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between the image and the text */
+}
+.fav{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    gap: 15%;
+}
+.fav li a{
+    text-decoration: none;
+    color: orange;
+}
+.fav li{
+    font-weight: bolder;
+    cursor: pointer;
+}
+.search{
+    height: 50%;
+}
+.search .tt{
+    height: 100%;
+    width: 10rem;
+    border-radius: 5px;
+    border: 1px solid rgba(255,255,255,0.8);
+}
+.search .butt{
+    height: 100%;
+    width: 5.5rem;
+    font-weight: 1000;
+    border: 2px solid goldenrod;
+    border-radius: 7.5px;
+    color: goldenrod;
+    transition: 0.2s;
+}
+.search .butt:hover{
+    color: white;
+    background-color: goldenrod;
+}
+main{
+    margin-top: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 350px; /* Set a fixed height for consistency */
+    width: 300px;  /* Width slightly adjusted for flexibility */
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-right: 2.5%;
+    margin-bottom: 2.5%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.image {
+    height: 200px;
+    width: 100%; /* Ensures the image takes full width of the card */
+    object-fit: cover; /* Keeps the image aspect ratio while filling the space */
+}
+
+.container h3 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 10px;
+    height: 40px; /* Fixed height for title to maintain uniformity */
+    overflow: hidden; /* Hide overflow for longer titles */
+    text-overflow: ellipsis; /* Adds "..." for longer titles */
+}
+
+.container p {
+    font-size: 0.9rem;
+    padding: 0 10px;
+    height: 80px; /* Fixed height for description to maintain uniformity */
+    overflow: hidden; /* Hide overflow for long descriptions */
+    text-overflow: ellipsis;
+}
+.news-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+} 
+footer{
+    height: 15%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+footer h3{
+    color: white;
+    text-align: center;
+}
